@@ -1,12 +1,16 @@
 package hello;
 
 import java.util.concurrent.atomic.AtomicLong;
+
+import com.google.gson.Gson;
+import javabean.TestEntity;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class GreetingController {
+    static Gson gson = new Gson();
 
     private static final String template = "Hello, %s!";
     private final AtomicLong counter = new AtomicLong();
@@ -16,5 +20,13 @@ public class GreetingController {
 
         return new Greeting(counter.incrementAndGet(),
                 String.format(template, name));
+    }
+    @RequestMapping("/testjson")
+    public String testjson() {
+        TestEntity testEntity = new TestEntity();
+        testEntity.setNum(20);
+        testEntity.setName("jack");
+        String jsonString = gson.toJson(testEntity);
+        return jsonString;
     }
 }
