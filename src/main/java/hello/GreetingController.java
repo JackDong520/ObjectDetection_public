@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class GreetingController {
-    static Gson gson = new Gson();
+    static Gson gson = new Gson();//json处理工具，处理给前端返回的json数据
 
     private static final String template = "Hello, %s!";
     private final AtomicLong counter = new AtomicLong();
@@ -21,6 +21,12 @@ public class GreetingController {
         return new Greeting(counter.incrementAndGet(),
                 String.format(template, name));
     }
+
+    @RequestMapping("/getHomePageInfo")
+    public String getHomePageInfo() {
+
+        return "";
+    }
     @RequestMapping("/testjson")
     public String testjson() {
         TestEntity testEntity = new TestEntity();
@@ -29,4 +35,5 @@ public class GreetingController {
         String jsonString = gson.toJson(testEntity);
         return jsonString;
     }
+
 }
