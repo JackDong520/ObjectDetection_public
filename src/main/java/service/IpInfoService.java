@@ -1,13 +1,14 @@
 package service;
 
-import DB.DataBase;
+import DB.DBAccess;
+import javabean.TestEntity;
 import org.hibernate.Session;
 
 import org.hibernate.Transaction;
 import org.testng.annotations.Test;
 
 public class IpInfoService {
-    static Session session = new DataBase().getSession();
+    static Session session = new DBAccess().getSession();
 
     public void savetest(String name , int num){
         Transaction transaction = session.beginTransaction();

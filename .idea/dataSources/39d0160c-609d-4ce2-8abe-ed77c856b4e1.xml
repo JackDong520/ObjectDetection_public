@@ -2101,7 +2101,7 @@
     </key>
     <column id="492" parent="164" name="Time">
       <Position>1</Position>
-      <DataType>tinyint(4)|0s</DataType>
+      <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>

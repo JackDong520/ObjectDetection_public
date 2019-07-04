@@ -3,9 +3,11 @@ package hello;
 import java.util.concurrent.atomic.AtomicLong;
 
 import com.google.gson.Gson;
+import javabean.TestEntity;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+import service.HosttableService;
 
 @RestController
 public class GreetingController {
@@ -34,5 +36,10 @@ public class GreetingController {
         String jsonString = gson.toJson(testEntity);
         return jsonString;
     }
+    @RequestMapping("/getHosttableInfo")
+    public String getHosttableInfo(@RequestParam(value="time", defaultValue="0") int time) {
+        return new HosttableService().getHosttableInfo(time);
+    }
+
 
 }

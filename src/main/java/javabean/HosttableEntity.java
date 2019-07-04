@@ -6,7 +6,7 @@ import java.util.Objects;
 @Entity
 @Table(name = "hosttable", schema = "objectdetect", catalog = "")
 public class HosttableEntity {
-    private byte time;
+    private int time;
     private Long unknown;
     private Long broadbandRouter;
     private Long wap;
@@ -15,11 +15,11 @@ public class HosttableEntity {
 
     @Id
     @Column(name = "Time")
-    public byte getTime() {
+    public int getTime() {
         return time;
     }
 
-    public void setTime(byte time) {
+    public void setTime(int time) {
         this.time = time;
     }
 
