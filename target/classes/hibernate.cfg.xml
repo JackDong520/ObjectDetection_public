@@ -4,22 +4,20 @@
     "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
 <hibernate-configuration>
   <session-factory>
-    <property name="connection.url">jdbc:mysql://localhost:3306</property>
+    <property name="connection.url">jdbc:mysql://localhost:3306/objectdetect</property>
     <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+    <property name="connection.username">root</property>
     <!--数据库密码  -->
+    <property name="connection.password">13584600</property>
     <property name="hibernate.current_session_context_class">thread</property>
     <property name="dialect">org.hibernate.dialect.MySQLInnoDBDialect</property>
     <!--<property name="hibernate.show_sql">true</property>-->
+    <!--<property name="hibernate.show_sql">true</property>-->
     <property name="format_sql">true</property>
-    <mapping class="javabean.GraphIpInfo"/>
-    <mapping class="javabean.TestEntity"/>
-      <mapping class="javabean.HomepageEntity"/>
-    <mapping class="javabean.HosttableEntity"/>
-    <mapping class="javabean.MonitortableEntity"/>
-    <mapping class="javabean.WebcontaiontableEntity"/>
-    <mapping class="javabean.IpdetailedinfoEntity"/>
-    <mapping class="javabean.GraphDomainInfo"/>
     <mapping class="javabean.EmailinfoEntity"/>
+    <mapping class="javabean.DomaininfoEntity"/>
+    <mapping class="javabean.IpinfoEntity"/>
+    <mapping class="javabean.PluginbugEntity"/>
 
 
     <!-- DB schema will be updated if needed -->

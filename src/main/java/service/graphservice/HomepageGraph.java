@@ -1,4 +1,4 @@
-package service;
+package service.graphservice;
 
 public class HomepageGraph {
     public String getHomepageInfo(){

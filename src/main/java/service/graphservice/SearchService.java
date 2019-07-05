@@ -1,4 +1,4 @@
-package service;
+package service.graphservice;
 
 import com.google.gson.Gson;
 import graphjavabean.BugSearch.GraphBugInfo;
