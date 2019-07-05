@@ -1,3 +1,25 @@
+POST http://127.0.0.1:8080/getHosttableInfo?time=1
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-07-04T105335.200.txt
+
+###
+
+POST http://127.0.0.1:8080/getHosttableInfo?time=1
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-07-04T105317.200.txt
+
+###
+
+POST http://127.0.0.1:8080/getHosttableInfo?time=1
+Accept: */*
+Cache-Control: no-cache
+
+###
+
 POST http://www.baidu.com?name=jack
 Accept: */*
 Cache-Control: no-cache
