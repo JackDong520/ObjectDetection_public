@@ -1,4 +1,4 @@
-package graphjavabean;
+package graphjavabean.TopologyOfDomain;
 
 import java.util.ArrayList;
 

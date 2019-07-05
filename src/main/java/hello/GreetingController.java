@@ -7,7 +7,9 @@ import javabean.TestEntity;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+import service.DomainGraph;
 import service.HosttableService;
+import service.SearchService;
 
 @RestController
 public class GreetingController {
@@ -40,6 +42,24 @@ public class GreetingController {
     public String getHosttableInfo(@RequestParam(value="time", defaultValue="0") int time) {
         return new HosttableService().getHosttableInfo(time);
     }
+    @RequestMapping("/getGraphFromDomain")
+    public String getGraphFromDomain(@RequestParam(value="domain", defaultValue="com") String domain) {
+        return new DomainGraph().getGraphFromDomain(domain);
+    }
+
+    @RequestMapping("/getSearchInfoGraphFromKey")
+    public String getSearchInfoGraphFromKey(@RequestParam(value="Keywords", defaultValue="google") String Keywords) {
+        return new SearchService().getSearchInfoGraphFromKey(Keywords);
+    }
+
+    @RequestMapping("/getBugInfoGraphFormKey")
+    public String getBugInfoGraphFormKey(@RequestParam(value="Keywords", defaultValue="google") String Keywords) {
+        return new SearchService().getBugInfoGraphFormKey(Keywords);
+    }
+
+
+
+
 
 
 }

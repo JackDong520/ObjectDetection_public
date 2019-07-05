@@ -1,4 +1,4 @@
-package graphjavabean;
+package graphjavabean.TopologyOfDomain;
 
 public class GraphIpInfo {
     private String Ip;//ip的信息

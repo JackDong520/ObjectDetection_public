@@ -1,3 +1,35 @@
+POST http://127.0.0.1:8080/getBugInfoGraphFormKey?domain=jackdong
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-07-05T101732.200.txt
+
+###
+
+POST http://127.0.0.1:8080/getGraphFromKey?domain=jackdong
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-07-05T100431.200.txt
+
+###
+
+POST http://127.0.0.1:8080/getGraphFromDomain?domain=jackdong
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-07-05T052110.200.txt
+
+###
+
+POST http://127.0.0.1:8080/getGraphFromDomain?domain=jackdong
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-07-05T052051.200.txt
+
+###
+
 POST http://127.0.0.1:8080/getHosttableInfo?time=1
 Accept: */*
 Cache-Control: no-cache

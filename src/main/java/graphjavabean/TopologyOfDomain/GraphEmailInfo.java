@@ -1,4 +1,4 @@
-package graphjavabean;
+package graphjavabean.TopologyOfDomain;
 
 public class GraphEmailInfo {
     private String EmailName;//邮箱的名字
