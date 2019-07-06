@@ -11,9 +11,11 @@
     <property name="connection.password">13584600</property>
     <property name="hibernate.current_session_context_class">thread</property>
     <property name="dialect">org.hibernate.dialect.MySQLInnoDBDialect</property>
-    <!--<property name="hibernate.show_sql">true</property>-->
+    <property name="org.hibernate.type">false</property>
+
     <!--<property name="hibernate.show_sql">true</property>-->
     <property name="format_sql">true</property>
+    <property name="hibernate.show_sql">false</property>
     <mapping class="javabean.EmailinfoEntity"/>
     <mapping class="javabean.DomaininfoEntity"/>
     <mapping class="javabean.IpinfoEntity"/>

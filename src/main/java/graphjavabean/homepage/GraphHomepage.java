@@ -1,36 +1,85 @@
 package graphjavabean.homepage;
 
+import com.google.gson.Gson;
+import org.testng.annotations.Test;
+
 public class GraphHomepage {
-    private int numOfInstitution;
-    private int numOfCompany;
-    private int numOforganization;
+    private GraphNumOfBug graphNumOfBug;
+    private GraphNumOfEmail graphNumOfEmail;
+    private GraphNumOfTerminal graphNumOfTerminal;
+    private GraphNumOfUnderMoniter graphNumOfUnderMoniter;
+    private GraphNumOfSocailApp graphNumOfSocailApp;
+    private GraphNumOfWebCotent graphNumOfWebCotent;
 
-    private int numOfUnknown;
-    private int numOfWap;
-    private int numOfWapOfWeb;
-    private int numOfWebCam;
-    private int numOfRouter;
 
-    private int numOfApache_httpd;
-    private int numOfMicrosoft;
-    private int numOfNginx;
-    private int numOfVarnish;
-    private int numOfTengine;
-    private int numOfLitespeed;
-    private int numOfApache_Tomcat;
+    public GraphHomepage() {
+    }
 
-    private int numOfFacebook;
-    private int numOfTwitter;
-    private int numOfWeibo;
-    private int numOfOtherSocialApp;
+    public GraphHomepage(GraphNumOfBug graphNumOfBug, GraphNumOfEmail graphNumOfEmail, GraphNumOfTerminal graphNumOfTerminal, GraphNumOfUnderMoniter graphNumOfUnderMoniter, GraphNumOfSocailApp graphNumOfSocailApp, GraphNumOfWebCotent graphNumOfWebCotent) {
+        this.graphNumOfBug = graphNumOfBug;
+        this.graphNumOfEmail = graphNumOfEmail;
+        this.graphNumOfTerminal = graphNumOfTerminal;
+        this.graphNumOfUnderMoniter = graphNumOfUnderMoniter;
+        this.graphNumOfSocailApp = graphNumOfSocailApp;
+        this.graphNumOfWebCotent = graphNumOfWebCotent;
+    }
 
-    private int numOfGmail;
-    private int numOfIcloud;
-    private int numOf163;
-    private int numOfqq;
-    private int numOfOtherEmail;
+    public GraphNumOfBug getGraphNumOfBug() {
+        return graphNumOfBug;
+    }
 
-    private int numOfBugOne;
-    private int numOfBugTwo;
-    private int numOfBugThree;
+    public void setGraphNumOfBug(GraphNumOfBug graphNumOfBug) {
+        this.graphNumOfBug = graphNumOfBug;
+    }
+
+    public GraphNumOfEmail getGraphNumOfEmail() {
+        return graphNumOfEmail;
+    }
+
+    public void setGraphNumOfEmail(GraphNumOfEmail graphNumOfEmail) {
+        this.graphNumOfEmail = graphNumOfEmail;
+    }
+
+    public GraphNumOfTerminal getGraphNumOfTerminal() {
+        return graphNumOfTerminal;
+    }
+
+    public void setGraphNumOfTerminal(GraphNumOfTerminal graphNumOfTerminal) {
+        this.graphNumOfTerminal = graphNumOfTerminal;
+    }
+
+    public GraphNumOfUnderMoniter getGraphNumOfUnderMoniter() {
+        return graphNumOfUnderMoniter;
+    }
+
+    public void setGraphNumOfUnderMoniter(GraphNumOfUnderMoniter graphNumOfUnderMoniter) {
+        this.graphNumOfUnderMoniter = graphNumOfUnderMoniter;
+    }
+
+    public GraphNumOfSocailApp getGraphNumOfSocailApp() {
+        return graphNumOfSocailApp;
+    }
+
+    public void setGraphNumOfSocailApp(GraphNumOfSocailApp graphNumOfSocailApp) {
+        this.graphNumOfSocailApp = graphNumOfSocailApp;
+    }
+
+    public GraphNumOfWebCotent getGraphNumOfWebCotent() {
+        return graphNumOfWebCotent;
+    }
+
+    public void setGraphNumOfWebCotent(GraphNumOfWebCotent graphNumOfWebCotent) {
+        this.graphNumOfWebCotent = graphNumOfWebCotent;
+    }
+    @Test
+    public void test(){
+        GraphNumOfBug graphNumOfBug = new GraphNumOfBug(1,2,3);
+        GraphNumOfEmail graphNumOfEmail = new GraphNumOfEmail(5,6,9,8,4);
+        GraphNumOfTerminal graphNumOfTerminal = new GraphNumOfTerminal(9,5,8,3,1);
+        GraphNumOfUnderMoniter graphNumOfUnderMoniter = new GraphNumOfUnderMoniter(6,9,5);
+        GraphNumOfSocailApp graphNumOfSocailApp = new GraphNumOfSocailApp(8,9,6,1);
+        GraphNumOfWebCotent graphNumOfWebCotent = new GraphNumOfWebCotent(8,9,6,3,2,1,5);
+
+        System.out.println(new Gson().toJson(new GraphHomepage(graphNumOfBug,graphNumOfEmail,graphNumOfTerminal,graphNumOfUnderMoniter,graphNumOfSocailApp,graphNumOfWebCotent)));
+    }
 }

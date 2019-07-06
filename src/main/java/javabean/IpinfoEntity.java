@@ -125,4 +125,7 @@ public class IpinfoEntity {
         this.city = city;
         this.id = id;
     }
+
+    public IpinfoEntity() {
+    }
 }

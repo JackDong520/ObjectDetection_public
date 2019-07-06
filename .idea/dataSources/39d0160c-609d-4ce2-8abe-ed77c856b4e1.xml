@@ -2122,71 +2122,76 @@
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="492" parent="164" name="PRIMARY">
+    <column id="492" parent="164" name="owner">
+      <Position>4</Position>
+      <DataType>char(255)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <key id="493" parent="164" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="493" parent="165" name="ip">
+    <column id="494" parent="165" name="ip">
       <Position>1</Position>
       <DataType>char(255)|0s</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>&apos;&apos;</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="494" parent="165" name="domain">
+    <column id="495" parent="165" name="domain">
       <Position>2</Position>
       <Comment>该IP下的域名
 </Comment>
       <DataType>char(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="495" parent="165" name="location">
+    <column id="496" parent="165" name="location">
       <Position>3</Position>
       <Comment>该IP的地址
 </Comment>
       <DataType>char(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="496" parent="165" name="country">
+    <column id="497" parent="165" name="country">
       <Position>4</Position>
       <Comment>该域名所属的国家</Comment>
       <DataType>char(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="497" parent="165" name="hostname">
+    <column id="498" parent="165" name="hostname">
       <Position>5</Position>
       <Comment>该IP所属的主机名
 </Comment>
       <DataType>char(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="498" parent="165" name="org">
+    <column id="499" parent="165" name="org">
       <Position>6</Position>
       <Comment>该IP 所属的组织</Comment>
       <DataType>char(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="499" parent="165" name="city">
+    <column id="500" parent="165" name="city">
       <Position>7</Position>
       <Comment>该IP所在的城市
 </Comment>
       <DataType>char(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="500" parent="165" name="id">
+    <column id="501" parent="165" name="id">
       <Position>8</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="501" parent="165" name="PRIMARY">
+    <key id="502" parent="165" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="502" parent="166" name="plugin">
+    <column id="503" parent="166" name="plugin">
       <Position>1</Position>
       <Comment>漏洞插件的名称
 </Comment>
@@ -2195,34 +2200,34 @@
       <DefaultExpression>&apos;&apos;</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="503" parent="166" name="Keyname">
+    <column id="504" parent="166" name="Keyname">
       <Position>2</Position>
       <Comment>与该漏洞相关的关键词
 </Comment>
       <DataType>char(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="504" parent="166" name="submittime">
+    <column id="505" parent="166" name="submittime">
       <Position>3</Position>
       <Comment>漏洞提交的时间</Comment>
       <DataType>char(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="505" parent="166" name="buglevel">
+    <column id="506" parent="166" name="buglevel">
       <Position>4</Position>
       <Comment>漏洞的等级说明
 </Comment>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="506" parent="166" name="id">
+    <column id="507" parent="166" name="id">
       <Position>5</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="507" parent="166" name="PRIMARY">
+    <key id="508" parent="166" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
