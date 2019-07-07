@@ -6,6 +6,7 @@ import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
 import org.testng.annotations.Test;
+import temptable.javabean.zoomApi.ZoomEyeInfo;
 
 import java.io.IOException;
 
@@ -17,7 +18,7 @@ public class ZoomEyeHttp {
         HttpUrl.Builder urlBuilder = HttpUrl.parse("https://api.zoomeye.org/web/search")
                 .newBuilder();
         urlBuilder.addQueryParameter("query", "ip:23.230.118.232");
-        Request request = reqBuild.url(urlBuilder.build()).addHeader("Authorization", "JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZGVudGl0eSI6IjExMDk2NDgxMzlAcXEuY29tIiwiaWF0IjoxNTYyNTA4MDY3LCJuYmYiOjE1NjI1MDgwNjcsImV4cCI6MTU2MjU1MTI2N30.bkP2vY7wF1tmCrPxzo-I5ZY5iR9zn3uZYwIicUQr1VI").build();
+        Request request = reqBuild.url(urlBuilder.build()).addHeader("Authorization", "JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZGVudGl0eSI6InNfeF96aGFuZ0AxNjMuY29tIiwiaWF0IjoxNTYyNTExNDgwLCJuYmYiOjE1NjI1MTE0ODAsImV4cCI6MTU2MjU1NDY4MH0.Ryx-z4RNRlsQclcfpiKg9pSw9w4xWv4_OCC1lsWlRZ0").build();
 
         try (Response response = client.newCall(request).execute()) {
             jsonString = response.body().string();
@@ -30,7 +31,10 @@ public class ZoomEyeHttp {
     }
     @Test
     public void test(){
-        System.out.println(new ZoomEyeHttp().getZoomEyeJsonFromHttp());
+
         Gson gson = new Gson();
+        ZoomEyeInfo zoomEyeInfo =gson.fromJson(new ZoomEyeHttp().getZoomEyeJsonFromHttp() , ZoomEyeInfo.class);
+
+        System.out.println(zoomEyeInfo.getAvailable());
     }
 }

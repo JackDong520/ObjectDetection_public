@@ -19,6 +19,14 @@ public class EmailInfo {
     private Data data;
     private Meta meta;
 
+    public EmailInfo() {
+    }
+
+    public EmailInfo(Data data, Meta meta) {
+        this.data = data;
+        this.meta = meta;
+    }
+
     public void setData(Data data) {
         this.data = data;
     }
