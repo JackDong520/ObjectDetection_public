@@ -16,10 +16,14 @@
     <!--<property name="hibernate.show_sql">true</property>-->
     <property name="format_sql">true</property>
     <property name="hibernate.show_sql">false</property>
-    <mapping class="javabean.EmailinfoEntity"/>
-    <mapping class="javabean.DomaininfoEntity"/>
-    <mapping class="javabean.IpinfoEntity"/>
-    <mapping class="javabean.PluginbugEntity"/>
+    <mapping class="temptable.javabean.EmailinfoEntity"/>
+    <mapping class="temptable.javabean.DomaininfoEntity"/>
+    <mapping class="temptable.javabean.IpinfoEntity"/>
+    <mapping class="temptable.javabean.PluginbugEntity"/>
+    <mapping class="temptable.javabean.BuginfoEntity"/>
+    <mapping class="temptable.temp.HttpEmailEntity"/>
+    <mapping class="temptable.temp.HttpEmaildataEntity"/>
+    <mapping class="temptable.temp.HttpEmailsourceEntity"/>
 
 
     <!-- DB schema will be updated if needed -->

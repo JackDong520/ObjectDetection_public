@@ -1,22 +1,12 @@
 package Dao;
 
-import DB.DBAccess;
-import javabean.IpinfoEntity;
-import org.hibernate.Session;
-import org.hibernate.Transaction;
+import temptable.javabean.IpinfoEntity;
 import org.hibernate.query.Query;
 import org.testng.annotations.Test;
 
 import java.util.ArrayList;
 
-public class IpInfoDao {
-    private static Session session;
-    private static Transaction transaction;
-    private static DBAccess dbAccess;
-
-    static {
-        dbAccess = new DBAccess();
-    }
+public class IpInfoDao extends BaseDao{
 
     //通过IP查找ipinfo中的信息
     private ArrayList<IpinfoEntity> selectIpinfoFromIp(String ip, String hql) {
@@ -53,6 +43,10 @@ public class IpInfoDao {
     public ArrayList<IpinfoEntity> selectIpinfoFromOrg(String org) {
         String hql = "from IpinfoEntity s where s.org=?1";
         return selectIpinfoFromIp(org, hql);
+    }
+    public ArrayList<IpinfoEntity> selectIpinfoFromHostname(String hostname) {
+        String hql = "from IpinfoEntity s where s.hostname=?1";
+        return selectIpinfoFromIp(hostname, hql);
     }
 
     public ArrayList<IpinfoEntity> selectIpinfoFromCity(String city) {

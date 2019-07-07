@@ -6,7 +6,9 @@ import com.google.gson.Gson;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-import service.graphservice.DomainGraph;
+import service.graphservice.BugInfoGraphService;
+import service.graphservice.DomainGraphService;
+import service.graphservice.IpinfoGraphService;
 import service.graphservice.SearchService;
 
 @RestController
@@ -29,11 +31,6 @@ public class GreetingController {
         return "";
     }
 
-    @RequestMapping("/getGraphFromDomain")
-    public String getGraphFromDomain(@RequestParam(value="domain", defaultValue="com") String domain) {
-        return new DomainGraph().getGraphFromDomain(domain);
-    }
-
     @RequestMapping("/getSearchInfoGraphFromKey")
     public String getSearchInfoGraphFromKey(@RequestParam(value="Keywords", defaultValue="google") String Keywords) {
         return new SearchService().getSearchInfoGraphFromKey(Keywords);
@@ -43,6 +40,29 @@ public class GreetingController {
     public String getBugInfoGraphFormKey(@RequestParam(value="Keywords", defaultValue="google") String Keywords) {
         return new SearchService().getBugInfoGraphFormKey(Keywords);
     }
+
+    @RequestMapping("/getDoaminGraphFromDomain")
+    public String getDoaminGraphFromDomain(@RequestParam(defaultValue="taobao.com") String domain) {
+        System.out.println(domain);
+        return new DomainGraphService().getDoaminGraphFromDomain(domain);
+    }
+
+    @RequestMapping("/getIpGraphFromIp")
+    public String getIpGraphFromIp(@RequestParam( defaultValue="127.0.0.1") String ip) {
+        System.out.println(ip);
+        return new IpinfoGraphService().getIpGraphFromIp(ip);
+    }
+
+    @RequestMapping("/getBugInfoGraphFromIp")
+    public String getBugInfoGraphFromIp(@RequestParam(value="ip" ,defaultValue="127.0.0.1") String ip) {
+        System.out.println(ip);
+        return new BugInfoGraphService().getBugInfoGraphFromIp(ip);
+    }
+
+
+
+
+
 
 
 

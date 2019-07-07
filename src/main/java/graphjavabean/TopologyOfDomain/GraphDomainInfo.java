@@ -6,7 +6,7 @@ public class GraphDomainInfo {
 
     private String domainName;//生成类后的域名的名称，为该图的键值
     private ArrayList<GraphEmailInfo>graphEmailInfos;//该域名下的所有邮箱的信息
-    private ArrayList<GraphIpInfo>graphIpInfos;//该域名对应的Ip的信息
+
 
     public GraphDomainInfo() {
     }
@@ -14,7 +14,7 @@ public class GraphDomainInfo {
     public GraphDomainInfo(String domainName, ArrayList<GraphEmailInfo> graphEmailInfos, ArrayList<GraphIpInfo> graphIpInfos) {
         this.domainName = domainName;
         this.graphEmailInfos = graphEmailInfos;
-        this.graphIpInfos = graphIpInfos;
+
     }
 
     public String getDomainName() {
@@ -33,13 +33,6 @@ public class GraphDomainInfo {
         this.graphEmailInfos = graphEmailInfos;
     }
 
-    public ArrayList<GraphIpInfo> getGraphIpInfos() {
-        return graphIpInfos;
-    }
-
-    public void setGraphIpInfos(ArrayList<GraphIpInfo> graphIpInfos) {
-        this.graphIpInfos = graphIpInfos;
-    }
 
 
 

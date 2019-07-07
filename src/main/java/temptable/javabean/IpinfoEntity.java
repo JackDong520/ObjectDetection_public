@@ -1,4 +1,4 @@
-package javabean;
+package temptable.javabean;
 
 import javax.persistence.*;
 import java.util.Objects;
