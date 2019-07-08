@@ -7,7 +7,7 @@ import java.util.Objects;
 @Table(name = "http_email", schema = "objectdetect", catalog = "")
 public class HttpEmailEntity {
     private int id;
-    private String value;
+    private String email;
     private String type;
     private String firstName;
     private String lastName;
@@ -23,7 +23,7 @@ public class HttpEmailEntity {
 
     public HttpEmailEntity(int id, String value, String type, String firstName, String lastName, String position, String seniority, String department, String linkedin, String twitter, String phoneNumber) {
         this.id = id;
-        this.value = value;
+        this.email = value;
         this.type = type;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -46,13 +46,13 @@ public class HttpEmailEntity {
     }
 
     @Basic
-    @Column(name = "value")
-    public String getValue() {
-        return value;
+    @Column(name = "email")
+    public String getEmail() {
+        return email;
     }
 
-    public void setValue(String value) {
-        this.value = value;
+    public void setEmail(String value) {
+        this.email = value;
     }
 
     @Basic
@@ -151,7 +151,7 @@ public class HttpEmailEntity {
         if (o == null || getClass() != o.getClass()) return false;
         HttpEmailEntity that = (HttpEmailEntity) o;
         return id == that.id &&
-                Objects.equals(value, that.value) &&
+                Objects.equals(email, that.email) &&
                 Objects.equals(type, that.type) &&
                 Objects.equals(firstName, that.firstName) &&
                 Objects.equals(lastName, that.lastName) &&
@@ -165,6 +165,6 @@ public class HttpEmailEntity {
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, value, type, firstName, lastName, position, seniority, department, linkedin, twitter, phoneNumber);
+        return Objects.hash(id, email, type, firstName, lastName, position, seniority, department, linkedin, twitter, phoneNumber);
     }
 }

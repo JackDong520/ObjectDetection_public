@@ -1,0 +1,7 @@
+{
+  "timestamp": "2019-07-06T12:56:35.389+0000",
+  "status": 500,
+  "error": "Internal Server Error",
+  "message": "No message available",
+  "path": "/getGraphFromDomain"
+}

@@ -1,11 +1,9 @@
 package HttpUtils.saveHttpInfo;
 
-import Dao.HttpEmailDao;
-import Dao.HttpEmailDataDao;
-import Dao.HttpEmailSourceDao;
+import Dao.HttpInfoDao.HttpEmailDao;
+import Dao.HttpInfoDao.HttpEmailDataDao;
+import Dao.HttpInfoDao.HttpEmailSourceDao;
 import com.google.gson.Gson;
-import okhttp3.OkHttpClient;
-import okhttp3.Request;
 
 public class BaseSaveHttpInfo {
     static protected HttpEmailDataDao httpEmailDataDao;

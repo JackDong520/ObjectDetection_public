@@ -1,0 +1,5 @@
+{
+  "error": "forbidden",
+  "message": "provided credentials do not provide access to specified resource",
+  "url": "https://www.zoomeye.org/api"
+}

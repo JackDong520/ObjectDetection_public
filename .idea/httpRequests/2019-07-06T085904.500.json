@@ -1,0 +1,7 @@
+{
+  "timestamp": "2019-07-06T12:59:04.684+0000",
+  "status": 500,
+  "error": "Internal Server Error",
+  "message": "Transaction already active",
+  "path": "/getGraphFromDomain"
+}

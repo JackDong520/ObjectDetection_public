@@ -9,8 +9,6 @@ import temptable.temp.HttpEmailEntity;
 import temptable.temp.HttpEmaildataEntity;
 import temptable.temp.HttpEmailsourceEntity;
 
-import java.lang.reflect.Type;
-import java.sql.SQLOutput;
 import java.util.ArrayList;
 
 public class SaveHttpEmailInfo extends BaseSaveHttpInfo {
@@ -38,7 +36,7 @@ public class SaveHttpEmailInfo extends BaseSaveHttpInfo {
 
             //HttpEmailEntity
             HttpEmailEntity emailtable = new HttpEmailEntity();
-            emailtable.setValue(emailInfo.getData().getEmails().get(i).getValue());
+            emailtable.setEmail(emailInfo.getData().getEmails().get(i).getValue());
             emailtable.setDepartment(emailInfo.getData().getEmails().get(i).getDepartment());
 
             emailtable.setFirstName(emailInfo.getData().getEmails().get(i).getFirst_name());

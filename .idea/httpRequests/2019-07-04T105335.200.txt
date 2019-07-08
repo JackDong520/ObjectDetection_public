@@ -1,0 +1,1 @@
+{"time":1,"unknown":20,"broadbandRouter":20,"wap":20,"webcam":20,"router":30}

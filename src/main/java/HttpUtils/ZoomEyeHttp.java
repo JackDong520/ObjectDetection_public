@@ -18,7 +18,7 @@ public class ZoomEyeHttp {
         HttpUrl.Builder urlBuilder = HttpUrl.parse("https://api.zoomeye.org/web/search")
                 .newBuilder();
         urlBuilder.addQueryParameter("query", "ip:23.230.118.232");
-        Request request = reqBuild.url(urlBuilder.build()).addHeader("Authorization", "JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZGVudGl0eSI6InNfeF96aGFuZ0AxNjMuY29tIiwiaWF0IjoxNTYyNTExNDgwLCJuYmYiOjE1NjI1MTE0ODAsImV4cCI6MTU2MjU1NDY4MH0.Ryx-z4RNRlsQclcfpiKg9pSw9w4xWv4_OCC1lsWlRZ0").build();
+        Request request = reqBuild.url(urlBuilder.build()).addHeader("Authorization", "JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZGVudGl0eSI6InNfeF96aGFuZ0AxNjMuY29tIiwiaWF0IjoxNTYyNTYwODMyLCJuYmYiOjE1NjI1NjA4MzIsImV4cCI6MTU2MjYwNDAzMn0.ysc4ErbUnLP5jBovwZp_DM1FQQjkMB3BciKoxSUoju8").build();
 
         try (Response response = client.newCall(request).execute()) {
             jsonString = response.body().string();
@@ -33,8 +33,9 @@ public class ZoomEyeHttp {
     public void test(){
 
         Gson gson = new Gson();
-        ZoomEyeInfo zoomEyeInfo =gson.fromJson(new ZoomEyeHttp().getZoomEyeJsonFromHttp() , ZoomEyeInfo.class);
-
-        System.out.println(zoomEyeInfo.getAvailable());
+        String jsonString = new ZoomEyeHttp().getZoomEyeJsonFromHttp();
+        System.out.println(jsonString);
+        ZoomEyeInfo zoomEyeInfo =gson.fromJson(jsonString , ZoomEyeInfo.class);
+        Gson gson1 = new Gson();
     }
 }
