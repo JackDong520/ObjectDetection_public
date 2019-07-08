@@ -1,4 +1,4 @@
-package service.graphservice;
+package service.graphSerice;
 
 import graphjavabean.TopologyOfDomain.GraphDomainInfo;
 import graphjavabean.TopologyOfDomain.GraphDomainSearch;

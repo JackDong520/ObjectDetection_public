@@ -6,10 +6,10 @@ import com.google.gson.Gson;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-import service.graphservice.BugInfoGraphService;
-import service.graphservice.DomainGraphService;
-import service.graphservice.IpinfoGraphService;
-import service.graphservice.SearchService;
+import service.graphSerice.BugInfoGraphService;
+import service.graphSerice.DomainGraphService;
+import service.graphSerice.IpinfoGraphService;
+import service.graphSerice.SearchService;
 
 @RestController
 public class GreetingController {

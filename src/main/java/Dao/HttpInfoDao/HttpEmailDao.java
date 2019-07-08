@@ -38,17 +38,28 @@ public class HttpEmailDao extends BaseDao {
 
         return domaininfoEntities;
     }
-    public ArrayList<HttpEmailEntity> selectDomainInfoFromEmail(String email) {
+//    public ArrayList<HttpEmailEntity> selectHttpEmailInfoFromDomain(String domain) {
+//        String hql = "from HttpEmailEntity s where s.domain=?1";
+//        return selectHttpEmailInfoFromKey(domain, hql);
+//    }
+    public ArrayList<HttpEmailEntity> selectHttpEmailInfoFromEmail(String email) {
         String hql = "from HttpEmailEntity s where s.email=?1";
         return selectHttpEmailInfoFromKey(email, hql);
     }
+    public HttpEmailEntity selectSingleHttpEmailInfoFromEmail(String email){
+        ArrayList<HttpEmailEntity> httpEmailEntities = selectHttpEmailInfoFromEmail(email);
+        if (httpEmailEntities==null)
+            return null;
+        return httpEmailEntities.get(0);
+    }
+
 
 
     @Test
     public void save(){
-        HttpEmailDao httpEmailDao = new HttpEmailDao();
-        HttpEmailEntity httpEmailEntity = new HttpEmailEntity(0,"1","1","1","1","1","1","1","1","1","1");
-        httpEmailDao.saveHttpEmailInfo(httpEmailEntity);
-        System.out.println(new HttpEmailDao().selectDomainInfoFromEmail("guillaume.princen@stripe.com"));
+//        HttpEmailDao httpEmailDao = new HttpEmailDao();
+//        HttpEmailEntity httpEmailEntity = new HttpEmailEntity(0,"1","1","1","1","1","1","1","1","1","1");
+//        httpEmailDao.saveHttpEmailInfo(httpEmailEntity);
+       // System.out.println(new HttpEmailDao().selectHttpEmailInfoFromDomain("stripe.com"));
     }
 }

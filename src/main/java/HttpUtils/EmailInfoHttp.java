@@ -9,7 +9,7 @@ import org.testng.annotations.Test;
 import java.io.IOException;
 
 public class EmailInfoHttp {
-    public String getEmailInfoJsonFromHttp() {
+    public String getEmailInfoJsonFromHttp(String domain) {
         String jsonString = new String();
         OkHttpClient client = new OkHttpClient();
         Request.Builder reqBuild = new Request.Builder();
@@ -30,6 +30,6 @@ public class EmailInfoHttp {
     }
     @Test
     public void test(){
-        System.out.println(new EmailInfoHttp().getEmailInfoJsonFromHttp());
+        System.out.println(new EmailInfoHttp().getEmailInfoJsonFromHttp("00"));
     }
 }

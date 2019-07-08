@@ -1,4 +1,4 @@
-package service.graphservice;
+package service.graphSerice;
 
 import Dao.BugInfoDao;
 import Dao.DomainIndoDao;

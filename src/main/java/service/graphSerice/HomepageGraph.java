@@ -1,4 +1,4 @@
-package service.graphservice;
+package service.graphSerice;
 
 public class HomepageGraph {
     public String getHomepageInfo(){

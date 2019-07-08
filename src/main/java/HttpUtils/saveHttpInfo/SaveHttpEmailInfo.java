@@ -12,9 +12,9 @@ import temptable.temp.HttpEmailsourceEntity;
 import java.util.ArrayList;
 
 public class SaveHttpEmailInfo extends BaseSaveHttpInfo {
-    public void saveHttpEmailInfo() {
+    public void saveHttpEmailInfo(String domain) {
         EmailInfoHttp emailInfoHttp = new EmailInfoHttp();
-        String jsonstring = emailInfoHttp.getEmailInfoJsonFromHttp();
+        String jsonstring = emailInfoHttp.getEmailInfoJsonFromHttp(domain);
         EmailInfo emailInfo;
         emailInfo = gson.fromJson(jsonstring, EmailInfo.class);
         //System.out.println(emailInfo.toString());
@@ -72,6 +72,6 @@ public class SaveHttpEmailInfo extends BaseSaveHttpInfo {
     }
     @Test
     public void test(){
-        new SaveHttpEmailInfo().saveHttpEmailInfo();
+        new SaveHttpEmailInfo().saveHttpEmailInfo("");
     }
 }
